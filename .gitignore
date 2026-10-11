@@ -5,3 +5,8 @@ mlruns/
 __pycache__/
 .ipynb_checkpoints/
 data/raw/
+
+notebooks/*.csv
+
+data/*.csv
+mlflow.db
