@@ -34,30 +34,26 @@ Most "AI agent" portfolio projects show a single happy path: one dataset, one ru
 
 ## Demo
 
-*(Add your own screenshots here before publishing — see the placeholders below for exactly what to capture.)*
+**The Streamlit app: upload, run, track progress, download results**
 
-**The Streamlit app — upload, run, download results**
+![Streamlit UI: run in progress](screenshots/01_streamlit_upload.png)
+*Upload a CSV, describe the prediction goal, and watch the pipeline advance through plan, explore, clean, engineer, train, evaluate and persist.*
 
-![Streamlit UI — upload form](screenshots/01_streamlit_upload.png)
-*Upload a CSV, describe the prediction goal, and start a run.*
+![Streamlit UI: run complete](screenshots/02_streamlit_success.png)
+*When the run finishes, the status flips to COMPLETE and both the Markdown and PDF reports are ready to download.*
 
-![Streamlit UI — run complete](screenshots/02_streamlit_success.png)
-*Once the pipeline finishes: a success message, and both Markdown and PDF report downloads.*
-
-**The FastAPI backend — interactive API docs**
+**The FastAPI backend: interactive API docs**
 
 ![FastAPI Swagger UI](screenshots/03_fastapi_docs.png)
-*`/runs`, `/runs/{id}/status`, `/runs/{id}/report`, `/runs/{id}/report.pdf`, `/health` — all testable directly from the browser.*
+*`/runs`, `/runs/{id}/status`, `/runs/{id}/report`, `/runs/{id}/report.pdf` and `/health`, all testable directly from the browser.*
 
 **A generated report**
 
 ![PDF report excerpt](screenshots/04_report_pdf.png)
-*Each step's task, the reviewer's verdict, and — when a step needed a retry — the full rejection → correction → approval history.*
+*Each step's task, coder attempts, reviewer verdict, and captured output.*
 
-**MLflow experiment tracking**
-
-![MLflow UI](screenshots/05_mlflow_ui.png)
-*Every run logged with its parameters, per-step metrics, and artifacts (charts, models, processed data).*
+![Report charts](screenshots/05_report_charts.png)
+*Charts produced by the agents are embedded in the report, including the final ROC curve (AUC 0.996) on the Breast Cancer benchmark.*
 
 ---
 
